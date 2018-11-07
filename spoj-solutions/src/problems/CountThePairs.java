@@ -1,0 +1,39 @@
+package problems;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * @author gauravbajpai
+ *
+ */
+public class CountThePairs {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int number = scanner.nextInt();
+		int diff = scanner.nextInt();
+		
+		List<Integer> list = new ArrayList<Integer>();
+		
+		for (int i = 0 ; i < number ; i++) {
+			list.add(scanner.nextInt());
+		}
+		
+		Collections.sort(list);
+		int count = 0;
+		for(int i = 0; i < number ; i++) {
+			if(Collections.binarySearch(list, list.get(i)-diff)>-1) {
+				count++;
+			}
+		}
+		System.out.println(count);
+
+	}
+
+}

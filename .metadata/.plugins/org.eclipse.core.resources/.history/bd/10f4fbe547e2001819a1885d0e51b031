@@ -1,0 +1,20 @@
+package problems;
+
+import java.util.Scanner;
+
+public class LifeAndUniverse {
+
+   public static void main(String[] args) {
+	   
+	   Scanner scanner = new Scanner(System.in);
+	    // get their input as a String
+	    
+	    while(true) {
+	    	int username = scanner.nextInt();
+	    	if(username!=42)
+	    	System.out.println();
+	    	else
+	    		break;
+	    }
+   }
+}
